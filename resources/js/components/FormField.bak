@@ -1,0 +1,76 @@
+<template>
+  <DefaultField
+    :field="field"
+    :errors="errors"
+    :show-help-text="showHelpText"
+    :full-width-content="fullWidthContent"
+  >
+    <template #field>
+       <input />
+    </template>
+  </DefaultField>
+</template>
+
+<script>
+import { FormField, HandlesValidationErrors } from 'laravel-nova'
+import VueNumberFormat from 'vue-number-format'
+
+export default {
+  mixins: [FormField, HandlesValidationErrors],
+
+  components: {VueNumberFormat},
+
+  props: ['resourceName', 'resourceId', 'field'],
+
+  created() {
+     //Nova.$on('nova-number-plus:updated', this.messageReceived);
+  },
+  
+  mounted() {
+	/*
+    Nova.$emit('nova-number-plus:updated', {
+      field: this.field.attribute,
+      value: this.value,
+    });
+	*/
+  },
+
+  data() {
+    return {
+      value: '',
+      unmasked: '',
+    };
+  },
+  methods: {
+    messageReceived(message) {
+       console.log(message);
+    },
+
+    /*
+     * Set the initial, internal value for the field.
+     */
+    setInitialValue() {
+      this.value = this.field.value || ''
+      this.unmasked = this.value;
+    },
+
+    /**
+     * Fill the given FormData object with the field's internal value.
+     */
+    fill(formData) {
+      //formData.append(this.fieldAttribute, this.unmasked || '')
+    },
+
+    onChange(event) {
+      /*
+      this.unmasked=event.target.unmasked
+
+      Nova.$emit('nova-number-plus:updated', {
+        field: this.field.attribute,
+        value: this.unmasked,
+      });
+    },
+     */
+  },
+}
+</script>
