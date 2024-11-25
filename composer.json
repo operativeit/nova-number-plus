@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Eom\\NovaNumberPlus\\": "src/"
+            "EomPlus\\NovaNumberPlus\\": "src/"
         }
     },
     "extra": {
