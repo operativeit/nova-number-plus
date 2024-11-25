@@ -1,6 +1,6 @@
 <?php
 
-namespace Eom\NovaNumberPlus;
+namespace EomPlus\NovaNumberPlus;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;

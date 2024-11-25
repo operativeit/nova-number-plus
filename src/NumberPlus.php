@@ -1,6 +1,6 @@
 <?php
 
-namespace Eom\NovaNumberPlus;
+namespace EomPlus\NovaNumberPlus;
 
 use Laravel\Nova\Fields\Field;
 

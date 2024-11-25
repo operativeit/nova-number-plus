@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Eom\\NovaNumberPlus\\FieldServiceProvider"
+                "EomPlus\\NovaNumberPlus\\FieldServiceProvider"
             ]
         }
     },
